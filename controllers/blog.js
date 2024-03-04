@@ -143,3 +143,18 @@ exports.getAddPost = (req, res, next) => {
 			'Craft your story on our post-adding page! Dive into a user-friendly platform where your creativity can flourish. Publish your ideas and tales with ease. Join us today and share your thoughts with our community!',
 	})
 }
+
+exports.postBlog = (req, res, next) => {
+	const sentance = req.body.sentance
+
+	Article.findBySentance(sentance)
+		.then(result =>
+			res.render('blog', {
+				title: 'War Echoes | Blog',
+				metaDescription:
+					'Explore the fascinating world of World War II on our blog. Discover inspiring articles, tips, and engaging discussions on everything related to the Second World War. Dive into our collection to delve into the history, events, and consequences of this crucial period in human history.',
+				posts: result[0],
+			})
+		)
+		.catch(err => console.log(err))
+}

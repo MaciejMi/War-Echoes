@@ -13,5 +13,6 @@ router.post('/edit-post', blogControllers.postEditPost)
 router.post('/edit', blogControllers.postEdit)
 router.post('/delete-post', blogControllers.postDeletePost)
 router.post('/delete', blogControllers.postDelete)
+router.post('/blog', blogControllers.postBlog)
 
 module.exports = router

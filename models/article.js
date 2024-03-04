@@ -40,4 +40,10 @@ module.exports = class Article {
 	static delete(id) {
 		return db.execute('DELETE FROM posts WHERE posts.id = ?;', [id])
 	}
+
+	static findBySentance(sentance) {
+		return db.execute(
+			`SELECT * FROM posts WHERE posts.title LIKE '%${sentance}%' OR posts.introduction LIKE '%${sentance}%'`
+		)
+	}
 }
