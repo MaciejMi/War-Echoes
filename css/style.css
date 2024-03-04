@@ -14,7 +14,6 @@ html {
 body {
   font-size: 1.6rem;
   font-family: sans-serif;
-  background-color: red;
 }
 
 .wrapper {
@@ -27,7 +26,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #e5e8eb;
+  background-color: #ffffff;
 }
 .nav .wrapper {
   display: flex;
@@ -44,6 +43,10 @@ body {
   display: block;
   text-decoration: none;
   color: #171212;
+  transition: color 0.3s;
+}
+.nav__link:hover {
+  color: #de2121;
 }
 .nav__links {
   display: none;
@@ -76,9 +79,15 @@ body {
 }
 
 @media (min-width: 576px) {
+  .nav {
+    border-bottom: 1px solid #e5e8eb;
+  }
   .nav .wrapper {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .nav__headers {
+    border: 0;
   }
   .nav__links {
     display: flex;

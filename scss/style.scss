@@ -16,7 +16,6 @@ html {
 body {
 	font-size: 1.6rem;
 	font-family: sans-serif;
-	background-color: red;
 }
 
 .wrapper {
@@ -47,7 +46,13 @@ body {
 		display: block;
 		text-decoration: none;
 		color: c.$nav-font-color;
+		transition: color 0.3s;
+
+		&:hover {
+			color: c.$nav-hover;
+		}
 	}
+
 	&__links {
 		display: none;
 		text-align: center;
@@ -85,9 +90,14 @@ body {
 
 @media (min-width: 576px) {
 	.nav {
+		border-bottom: 1px solid c.$nav-border-bottom;
 		.wrapper {
 			flex-direction: row;
 			justify-content: space-between;
+		}
+
+		&__headers {
+			border: 0;
 		}
 
 		&__links {
