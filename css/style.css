@@ -25,6 +25,7 @@ body {
 
 .nav {
   position: fixed;
+  top: 0;
   width: 100%;
   background-color: #e5e8eb;
 }
@@ -71,5 +72,26 @@ body {
   }
   to {
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 576px) {
+  .nav .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+  .nav__title {
+    font-size: 2.5rem;
+  }
+  .nav__title i {
+    font-size: 3.5rem;
+  }
+  .nav .hamburger {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
