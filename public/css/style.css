@@ -354,6 +354,14 @@ body {
 	color: #000;
 }
 
+.error {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60vh;
+	width: 100%;
+}
+
 @media (min-width: 576px) {
 	.nav .wrapper {
 		flex-direction: row;

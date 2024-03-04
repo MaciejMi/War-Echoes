@@ -15,4 +15,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(blogRoutes)
 
+app.use('/', (req, res, next) => {
+	res.render('404', {
+		title: '404',
+		metaDescription: 'Error 404',
+	})
+})
 app.listen(PORT_NUMBER)
