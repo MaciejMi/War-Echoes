@@ -6,6 +6,7 @@ const router = express.Router()
 router.get('/', blogControllers.getIndex)
 router.get('/blog', blogControllers.getBlog)
 router.get('/add-post', blogControllers.getAddPost)
+router.get('/article/:id', blogControllers.getArticle)
 
 router.post('/add-post', blogControllers.postAddPost)
 

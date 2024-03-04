@@ -1,66 +1,44 @@
-<!DOCTYPE html>
-<html lang="pl">
+<%- include('./includes/head.ejs') %>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <body>
+        <%- include('./includes/nav.ejs') %>
+            <main class="main">
+                <section class="section articles blog">
+                    <h1>Articles</h1>
+                    <p class="blog__description">Discover the stories of World War 2</p>
+                    <form>
+                        <input type="search" placeholder="Search blog post">
+                        <button>Search</button>
+                    </form>
 
-    <title>Blog</title>
-    <!-- Generate meta tags to this article :) -->
-    <link rel="shortcut icon" href="./img/tank.png" type="image/x-icon">
-    <link href="./css/hamburger.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/nav.js" defer></script>
-    <script src="./js/footer.js" defer></script>
-</head>
+                    <a href="/add-post" class="button">Add New Post</a>
 
-<body>
-    <nav class="nav">
-        <div class="wrapper">
-            <div class="nav__headers">
-                <a href="#" class="nav__title nav__link"><i class="ti ti-tank"></i> War Echoes</a>
-                <button class="hamburger hamburger--spin" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
-            <div class="nav__links">
-                <a href="/" class="nav__link">Home</a>
-                <a href="/#about-us" class="nav__link">About Us</a>
-                <a href="#" class="nav__link">Blog</a>
-            </div>
-        </div>
-    </nav>
+                    <div class="articles__container">
+                        <% if (posts.length===0){ %>
+                            <p>No featured articles
+                            </p>
+                            <% } else { %>
 
+                                <% posts.forEach(post=> { %>
 
-    <main class="main">
-        <section class="section articles blog">
-            <h1>Articles</h1>
-            <p class="blog__description">Discover the stories of World War 2</p>
-            <form>
-                <input type="search" placeholder="Search blog post">
-                <button>Search</button>
-            </form>
+                                    <a class="articles__box" href="/article/<%=post.id%>">
+                                        <img src="<%= post.photoUrl %>" alt="<%= post.title %>">
+                                        <h3>
+                                            <%= post.title %>
+                                        </h3>
+                                        <p>
+                                            <%= post.introduction %>
+                                        </p>
+                                    </a>
 
-            <a href="/add-post" class="button">Add New Post</a>
+                                    <% }); }%>
+                    </div>
+                </section>
 
-            <div class="articles__container">
+            </main>
 
-            </div>
-        </section>
+            <%- include('./includes/footer.ejs') %>
+    </body>
 
-    </main>
-
-    <footer class="footer">
-        <div class="footer__links">
-            <a href="/#about-us">About Us</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Privacy Policy</a>
-        </div>
-        <p>War Echoes &copy; <span id="yearField"></span> | Wszelkie prawa zastrzeżone! </p>
-    </footer>
-</body>
-
-</html>
+    </html>

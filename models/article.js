@@ -12,11 +12,21 @@ module.exports = class Article {
 	}
 
 	save() {
-		return db.execute('INSERT INTO posts (title, price, imageUrl, description) VALUES (?, ?, ?, ?)', [
-			this.title,
-			this.price,
-			this.imageUrl,
-			this.description,
-		])
+		return db.execute(
+			'INSERT INTO posts (title, introduction, text, photoUrl, author, date) VALUES (?, ?, ?, ?, ?, ?)',
+			[this.title, this.introduction, this.text, this.imageUrl, this.author, new Date(`${this.date}`)]
+		)
+	}
+
+	static fetchAll() {
+		return db.execute('SELECT * FROM posts;')
+	}
+
+	static fetchWithLimits(limit) {
+		return db.execute(`SELECT * FROM posts LIMIT ${limit}`)
+	}
+
+	static fetchById(id) {
+		return db.execute('SELECT * FROM posts WHERE id = ?', [id])
 	}
 }
