@@ -213,6 +213,26 @@ body {
 	}
 }
 
+.article {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin: 12rem 0;
+
+	&__title {
+		font-size: 3rem;
+	}
+
+	&__date {
+		color: c.$article-color;
+	}
+
+	img {
+		border-radius: 12px;
+		width: 100%;
+	}
+}
+
 .footer {
 	display: flex;
 	flex-direction: column;
