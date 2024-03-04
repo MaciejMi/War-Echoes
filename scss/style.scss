@@ -203,6 +203,14 @@ body {
 		p {
 			color: c.$box-description;
 		}
+
+		.button-container {
+			margin: 1rem 0;
+		}
+
+		.button {
+			padding: 1rem;
+		}
 	}
 }
 
@@ -257,6 +265,48 @@ body {
 		font-size: 1.8rem;
 		text-align: center;
 		color: c.$footer-color;
+	}
+}
+
+.button {
+	text-decoration: none;
+	color: c.$header-font-color;
+	background-color: c.$add-new-post-button;
+	padding: 2rem 3rem;
+	border-radius: 12px;
+	max-width: fit-content;
+}
+
+.blog {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 12rem;
+	&__description {
+		color: c.$blog-description-color;
+	}
+
+	form {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		input {
+			border: 1px solid transparent;
+			padding: 2rem 3rem;
+			border-radius: 12px;
+			background-color: c.$input-bg;
+		}
+
+		button {
+			border: 1px solid transparent;
+			background-color: c.$header-button-color;
+			color: c.$header-font-color;
+			padding: 1rem 3rem;
+			border-radius: 12px;
+			&:hover {
+				background-color: c.$header-button-hover;
+			}
+		}
 	}
 }
 
@@ -345,5 +395,9 @@ body {
 
 	.articles {
 		margin-top: 0;
+	}
+
+	.blog {
+		margin-top: 12rem;
 	}
 }

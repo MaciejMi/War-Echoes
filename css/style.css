@@ -184,6 +184,12 @@ body {
 .articles__box p {
   color: #6b6b6b;
 }
+.articles__box .button-container {
+  margin: 1rem 0;
+}
+.articles__box .button {
+  padding: 1rem;
+}
 
 .about-us p {
   line-height: 2.4rem;
@@ -229,6 +235,47 @@ body {
   font-size: 1.8rem;
   text-align: center;
   color: #876363;
+}
+
+.button {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #e5611a;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 12rem;
+}
+.blog__description {
+  color: #877063;
+}
+.blog form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.blog form input {
+  border: 1px solid transparent;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  background-color: #f5f2f0;
+}
+.blog form button {
+  border: 1px solid transparent;
+  background-color: #de2121;
+  color: #ffffff;
+  padding: 1rem 3rem;
+  border-radius: 12px;
+}
+.blog form button:hover {
+  background-color: #ff4848;
 }
 
 @media (min-width: 576px) {
@@ -300,5 +347,8 @@ body {
   }
   .articles {
     margin-top: 0;
+  }
+  .blog {
+    margin-top: 12rem;
   }
 }/*# sourceMappingURL=style.css.map */
