@@ -15,4 +15,24 @@ html {
 
 body {
 	font-size: 1.6rem;
+	font-family: sans-serif;
+}
+
+.nav {
+	&__title {
+		font-weight: bold;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: c.$nav-font-color;
+	}
+
+	&__links {
+		display: none;
+	}
+
+	.active {
+		display: block;
+	}
 }

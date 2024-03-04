@@ -13,4 +13,19 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: sans-serif;
+}
+
+.nav__title {
+  font-weight: bold;
+}
+.nav__link {
+  text-decoration: none;
+  color: #171212;
+}
+.nav__links {
+  display: none;
+}
+.nav .active {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
