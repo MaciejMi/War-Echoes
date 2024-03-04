@@ -168,6 +168,9 @@ body {
   text-decoration: none;
   color: #171212;
 }
+.articles__box h3 {
+  font-size: 1.8rem;
+}
 .articles__box img {
   margin-bottom: 1rem;
   width: 100%;
@@ -180,6 +183,11 @@ body {
 }
 .articles__box p {
   color: #6b6b6b;
+}
+
+.about-us p {
+  line-height: 2.4rem;
+  font-size: 1.8rem;
 }
 
 @media (min-width: 576px) {
@@ -246,7 +254,10 @@ body {
   .header input {
     max-width: 500px;
   }
-  .section {
+  .section__heading {
+    font-size: 3rem;
+  }
+  .articles {
     margin-top: 0;
   }
 }/*# sourceMappingURL=style.css.map */

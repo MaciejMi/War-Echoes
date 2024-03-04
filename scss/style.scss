@@ -187,6 +187,10 @@ body {
 		width: 100%;
 		text-decoration: none;
 		color: c.$box-color;
+
+		h3 {
+			font-size: 1.8rem;
+		}
 		img {
 			margin-bottom: 1rem;
 			width: 100%;
@@ -199,6 +203,13 @@ body {
 		p {
 			color: c.$box-description;
 		}
+	}
+}
+
+.about-us {
+	p {
+		line-height: 2.4rem;
+		font-size: 1.8rem;
 	}
 }
 
@@ -281,7 +292,11 @@ body {
 			max-width: 500px;
 		}
 	}
-	.section {
+	.section__heading {
+		font-size: 3rem;
+	}
+
+	.articles {
 		margin-top: 0;
 	}
 }
