@@ -16,23 +16,32 @@
 
                     <div class="articles__container">
                         <% if (posts.length===0){ %>
-                            <p>No featured articles
-                            </p>
-                            <% } else { %>
+
+                            <% } else {%>
 
                                 <% posts.forEach(post=> { %>
 
-                                    <a class="articles__box" href="/article/<%=post.id%>">
-                                        <img src="<%= post.photoUrl %>" alt="<%= post.title %>">
+
+                                    <a href="/article/<%=post.id%>" class="articles__box">
+                                        <img src="<%= post.photoUrl %>" alt="<%= post.titlte %>">
                                         <h3>
                                             <%= post.title %>
                                         </h3>
                                         <p>
                                             <%= post.introduction %>
                                         </p>
+                                        <div class="button-container">
+                                            <form action="/edit-post" method="POST">
+                                                <input type="hidden" name="id" value="<%= post.id %>">
+                                                <button type="submit" class="button">Edit</button>
+                                            </form>
+                                            <form action="/delete" method="POST">
+                                                <input type="hidden" name="id" value="<%= post.id %>">
+                                                <button type="submit" class="button">Delete</button>
+                                            </form>
+                                        </div>
                                     </a>
-
-                                    <% }); }%>
+                                    <% });} %>
                     </div>
                 </section>
 

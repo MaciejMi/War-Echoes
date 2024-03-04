@@ -30,15 +30,23 @@ exports.getArticle = (req, res, next) => {
 	const articleId = req.params.id
 	Article.fetchById(articleId)
 		.then(([rows, col]) => {
-			console.log(rows)
 			if (rows.length === 0) {
-				res.redirect('/')
+				return res.redirect('/')
 			}
 
+			const date = new Date(rows[0].date)
+
+			const day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate()
+			const month = date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth()
+
+			const currentDate = `${day}.${month}.${date.getFullYear()}`
+
+			rows[0].date = currentDate
+
 			res.render('article', {
-				post: rows,
-				title: `War Echoes | ${rows.title}`,
-				metaDescription: rows.introduction,
+				postData: rows[0],
+				title: `War Echoes | ${rows[0].title}`,
+				metaDescription: rows[0].introduction,
 			})
 		})
 		.catch(err => {

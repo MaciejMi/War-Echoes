@@ -1,5 +1,10 @@
 <%- include('./includes/head.ejs') %>
-
+    <link rel="shortcut icon" href="../img/tank.png" type="image/x-icon">
+    <link href="../css/hamburger.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/footer.js" defer></script>
     </head>
 
     <body>
@@ -8,18 +13,18 @@
             <main class="main">
                 <section class="section article">
                     <h1 class="article__title">
-                        <%= post.title %>
+                        <%= postData.title %>
                     </h1>
-                    <p class="article__date">By <%= post.author %>. Publisheed on <%= post.date %>
+                    <p class="article__date">By <%= postData.author %>. Publisheed on <%= postData.date %>
                     </p>
                     <p class="article__introduction">
-                        <%= post.introduction %>
+                        <%= postData.introduction %>
                     </p>
 
-                    <img src="<%= post.photoUrl %>" alt="<%= post.title %>">
+                    <img src="<%= postData.photoUrl %>" alt="<%= postData.title %>">
 
                     <p class="article__text">
-                        <%= post.text %>
+                        <%= postData.text %>
                     </p>
                 </section>
             </main>
