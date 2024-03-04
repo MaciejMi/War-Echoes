@@ -190,6 +190,30 @@ body {
   font-size: 1.8rem;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+.footer__links {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+.footer a {
+  text-decoration: none;
+  color: #876363;
+}
+.footer p {
+  padding: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #876363;
+}
+
 @media (min-width: 576px) {
   .nav .wrapper {
     flex-direction: row;
