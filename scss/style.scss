@@ -103,9 +103,56 @@ body {
 		background-image: url('../img/background.avif');
 	}
 	&__shadow {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 3rem;
 		position: absolute;
 		inset: 0;
-		background-color: rgba(0, 0, 0, 0.3);
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	&__text-box {
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		color: c.$header-font-color;
+
+		h1 {
+			color: c.$header-main-color;
+		}
+
+		p {
+			line-height: 24px;
+		}
+	}
+
+	form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	input {
+		padding: 2rem 3rem;
+
+		border: 1px solid transparent;
+		border-radius: 12px;
+	}
+
+	button {
+		padding: 1rem 2rem;
+		border: 1px solid transparent;
+		color: c.$header-font-color;
+		border-radius: 12px;
+		background-color: c.$header-button-color;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		&:hover {
+			background-color: c.$header-button-hover;
+		}
 	}
 }
 
@@ -141,6 +188,28 @@ body {
 	.header {
 		margin: 10rem auto;
 		height: 60vh;
+
+		&__text-box {
+			padding: 4rem;
+			gap: 2rem;
+			h1 {
+				font-size: 4.5rem;
+			}
+
+			p {
+				line-height: 30px;
+				font-size: 2rem;
+			}
+		}
+
+		input {
+			width: 100%;
+			max-width: 400px;
+		}
+
+		button {
+			padding: 1rem 3rem;
+		}
 	}
 }
 
@@ -149,5 +218,21 @@ body {
 		max-width: 960px;
 		border-radius: 12px;
 		overflow: hidden;
+
+		&__text-box {
+			padding: 5rem;
+			gap: 2rem;
+			h1 {
+				font-size: 6rem;
+			}
+
+			p {
+				font-size: 2.2rem;
+			}
+		}
+
+		input {
+			max-width: 500px;
+		}
 	}
 }
