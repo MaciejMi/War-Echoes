@@ -1,0 +1,35 @@
+<%- include('./includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('./includes/nav.ejs') %>
+
+            <header class="header">
+                <div class="header__image header__image--post">
+                    <div class="header__shadow">
+                        <div class="header__text-box">
+                            <h1>The Second World War</h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main">
+                <section class="section new-post">
+                    <h2>Create New Post</h2>
+                    <form method="POST" action="/add-post">
+                        <input required type="text" placeholder="Enter post title" name="title">
+                        <textarea required cols="30" rows="10" placeholder="Enter your introduction"
+                            name="introduction"></textarea>
+                        <textarea required cols="30" rows="10" placeholder="Enter your text" name="text"></textarea>
+                        <input required type="text" placeholder="Enter photo URL" name="imageUrl">
+                        <input required type="text" placeholder="Author" name="author">
+                        <button type="submit">Publish</button>
+                    </form>
+                </section>
+            </main>
+
+            <%- include('./includes/footer.ejs') %>
+    </body>
+
+    </html>
