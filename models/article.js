@@ -29,4 +29,11 @@ module.exports = class Article {
 	static fetchById(id) {
 		return db.execute('SELECT * FROM posts WHERE id = ?', [id])
 	}
+
+	static update(id, title, introduction, text, imageUrl, author, currentDate) {
+		return db.execute(
+			'UPDATE posts SET title = ?, introduction = ?, text = ?, photoUrl = ?, author = ?, date = ? WHERE id = ?;',
+			[title, introduction, text, imageUrl, author, new Date(currentDate), id]
+		)
+	}
 }

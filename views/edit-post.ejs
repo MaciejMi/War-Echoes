@@ -17,13 +17,18 @@
 
             <main class="main">
                 <section class="section new-post">
-                    <h2>Create New Post</h2>
-                    <form method="POST" action="/edit-post">
-                        <input type="text" placeholder="Enter post title">
-                        <textarea cols="30" rows="10" placeholder="Enter your introduction"></textarea>
-                        <textarea cols="30" rows="10" placeholder="Enter your text"></textarea>
-                        <input type="text" placeholder="Enter photo URL">
-                        <button type="submit">Publish</button>
+                    <h2>Edit Post</h2>
+                    <form method="POST" action="/edit">
+                        <input name="title" type="text" placeholder="Enter post title" value="<%= article.title %>">
+                        <textarea name="introduction" cols="30" rows="10"
+                            placeholder="Enter your introduction"><%= article.introduction %></textarea>
+                        <textarea name="text" cols="30" rows="10"
+                            placeholder="Enter your text"><%= article.text %></textarea>
+                        <input name="photoUrl" type="text" placeholder="Enter photo URL"
+                            value="<%= article.photoUrl %>">
+                        <input name="author" type="text" placeholder="Author" value="<%= article.author %>">
+                        <input type="hidden" name="id" value="<%= article.id %>">
+                        <button type="submit">Edit</button>
                     </form>
                 </section>
             </main>

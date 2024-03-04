@@ -84,3 +84,39 @@ exports.postAddPost = (req, res, next) => {
 		.then(() => res.redirect('/'))
 		.catch(err => console.log(err))
 }
+
+exports.postEditPost = (req, res, next) => {
+	Article.fetchById(req.body.id)
+		.then(([article]) => {
+			res.render('edit-post', {
+				title: 'War Echoes | Edit Post',
+				metaDescription:
+					'Edit your story on our post-editing page! Dive into a user-friendly platform where your creativity can flourish. Publish your ideas and tales with ease. Join us today and share your thoughts with our community!',
+				article: article[0],
+			})
+		})
+		.catch(err => console.log(err))
+}
+
+exports.postEdit = (req, res, next) => {
+	const id = req.body.id
+	const title = req.body.title
+	const introduction = req.body.introduction
+	const text = req.body.text
+	const photoUrl = req.body.photoUrl
+	const author = req.body.author
+
+	const date = new Date()
+
+	const day = date.getDate()
+	const month = date.getMonth() + 1
+	const year = date.getFullYear()
+
+	const currentDate = `${day}-${month}-${year}`
+
+	Article.update(id, title, introduction, text, photoUrl, author, currentDate)
+		.then(result => {
+			res.redirect('/')
+		})
+		.catch(err => console.log(err))
+}
