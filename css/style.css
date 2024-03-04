@@ -14,18 +14,53 @@ html {
 body {
   font-size: 1.6rem;
   font-family: sans-serif;
+  background-color: red;
 }
 
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  background-color: #e5e8eb;
+}
+.nav .wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.nav__headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e8eb;
+}
 .nav__title {
   font-weight: bold;
 }
 .nav__link {
+  display: block;
+  padding: 2rem 0;
   text-decoration: none;
   color: #171212;
 }
 .nav__links {
   display: none;
+  text-align: center;
+  animation: slide 0.3s ease;
 }
 .nav .active {
   display: block;
+}
+@keyframes slide {
+  from {
+    transform: translateY(-1200px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */
