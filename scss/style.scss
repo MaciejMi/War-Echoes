@@ -101,7 +101,11 @@ body {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-image: url('../img/background.avif');
+		&--post {
+			background-image: url('../img/post-bg.jpg');
+		}
 	}
+
 	&__shadow {
 		display: flex;
 		flex-direction: column;
@@ -238,6 +242,35 @@ body {
 	img {
 		border-radius: 12px;
 		width: 100%;
+	}
+}
+
+.new-post {
+	display: flex;
+	flex-direction: column;
+
+	form {
+		margin: 3rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		input,
+		textarea {
+			padding: 1rem 3rem;
+			border: 1px solid #ffecec;
+			border-radius: 12px;
+			resize: vertical;
+		}
+
+		button {
+			padding: 2rem;
+			background: none;
+			border: 1px solid transparent;
+			border-radius: 12px;
+			background-color: #000;
+			color: #fff;
+		}
 	}
 }
 

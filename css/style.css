@@ -92,6 +92,9 @@ body {
   background-position: center;
   background-image: url("../img/background.avif");
 }
+.header__image--post {
+  background-image: url("../img/post-bg.jpg");
+}
 .header__shadow {
   display: flex;
   flex-direction: column;
@@ -211,6 +214,32 @@ body {
 .article img {
   border-radius: 12px;
   width: 100%;
+}
+
+.new-post {
+  display: flex;
+  flex-direction: column;
+}
+.new-post form {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.new-post form input,
+.new-post form textarea {
+  padding: 1rem 3rem;
+  border: 1px solid #ffecec;
+  border-radius: 12px;
+  resize: vertical;
+}
+.new-post form button {
+  padding: 2rem;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #000;
+  color: #fff;
 }
 
 .footer {
