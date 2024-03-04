@@ -253,6 +253,9 @@ body {
   gap: 2rem;
   margin-top: 12rem;
 }
+.blog h1 {
+  font-size: 3rem;
+}
 .blog__description {
   color: #877063;
 }
@@ -276,6 +279,37 @@ body {
 }
 .blog form button:hover {
   background-color: #ff4848;
+}
+
+.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem;
+  height: 100vh;
+}
+.delete .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.delete .button-group a {
+  padding: 2rem 5rem;
+  text-decoration: none;
+  border-radius: 12px;
+}
+.delete .button-group a:first-of-type {
+  background-color: black;
+  color: #fff;
+}
+.delete .button-group a:last-of-type {
+  background-color: #ededed;
+  color: #000;
 }
 
 @media (min-width: 576px) {
