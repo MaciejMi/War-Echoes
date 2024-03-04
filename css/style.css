@@ -39,12 +39,8 @@ body {
   align-items: center;
   border-bottom: 1px solid #e5e8eb;
 }
-.nav__title {
-  font-weight: bold;
-}
 .nav__link {
   display: block;
-  padding: 2rem 0;
   text-decoration: none;
   color: #171212;
 }
@@ -53,8 +49,21 @@ body {
   text-align: center;
   animation: slide 0.3s ease;
 }
+.nav__links.active .nav__link {
+  padding: 2rem 0;
+}
 .nav .active {
   display: block;
+}
+.nav__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.nav__title i {
+  font-size: 3rem;
 }
 @keyframes slide {
   from {

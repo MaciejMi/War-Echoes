@@ -42,13 +42,8 @@ body {
 		border-bottom: 1px solid c.$nav-border-bottom;
 	}
 
-	&__title {
-		font-weight: bold;
-	}
-
 	&__link {
 		display: block;
-		padding: 2rem 0;
 		text-decoration: none;
 		color: c.$nav-font-color;
 	}
@@ -58,8 +53,23 @@ body {
 		animation: slide 0.3s ease;
 	}
 
+	&__links.active &__link {
+		padding: 2rem 0;
+	}
+
 	.active {
 		display: block;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		font-weight: bold;
+		font-size: 2rem;
+		i {
+			font-size: 3rem;
+		}
 	}
 
 	@keyframes slide {
