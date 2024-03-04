@@ -36,4 +36,8 @@ module.exports = class Article {
 			[title, introduction, text, imageUrl, author, new Date(currentDate), id]
 		)
 	}
+
+	static delete(id) {
+		return db.execute('DELETE FROM posts WHERE posts.id = ?;', [id])
+	}
 }

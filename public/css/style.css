@@ -339,16 +339,17 @@ body {
 	justify-content: center;
 	margin-top: 3rem;
 }
-.delete .button-group a {
+.delete .button-group button {
+	border: 1px solid transparent;
 	padding: 2rem 5rem;
 	text-decoration: none;
 	border-radius: 12px;
 }
-.delete .button-group a:first-of-type {
+.delete .button-group .first {
 	background-color: black;
 	color: #fff;
 }
-.delete .button-group a:last-of-type {
+.delete .button-group .second {
 	background-color: #ededed;
 	color: #000;
 }
